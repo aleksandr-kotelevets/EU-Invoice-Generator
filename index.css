@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&f[]=general-sans@400,500,600&display=swap');
+
+@layer base {
+  :root {
+    --font-sans: 'Satoshi', 'General Sans', system-ui, sans-serif;
+    --font-serif: Georgia, serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Finance / Invoice — professional teal-navy palette */
+    --background: 48 14% 96%;
+    --foreground: 40 18% 14%;
+
+    --card: 48 12% 98%;
+    --card-foreground: 40 18% 14%;
+    --card-border: 40 8% 84%;
+
+    --popover: 48 12% 98%;
+    --popover-foreground: 40 18% 14%;
+    --popover-border: 40 8% 84%;
+
+    --primary: 184 98% 22%;
+    --primary-foreground: 0 0% 100%;
+    --primary-border: transparent;
+
+    --secondary: 48 10% 92%;
+    --secondary-foreground: 40 12% 30%;
+    --secondary-border: transparent;
+
+    --muted: 48 8% 92%;
+    --muted-foreground: 40 6% 46%;
+    --muted-border: transparent;
+
+    --accent: 48 10% 92%;
+    --accent-foreground: 40 18% 14%;
+    --accent-border: transparent;
+
+    --destructive: 330 60% 41%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-border: transparent;
+
+    --border: 40 8% 84%;
+    --input: 40 8% 84%;
+    --ring: 184 98% 22%;
+
+    --chart-1: 184 60% 34%;
+    --chart-2: 16 63% 41%;
+    --chart-3: 184 50% 18%;
+    --chart-4: 184 30% 80%;
+    --chart-5: 340 40% 47%;
+
+    --sidebar: 48 14% 96%;
+    --sidebar-foreground: 40 18% 14%;
+    --sidebar-border: 40 8% 84%;
+    --sidebar-ring: 184 98% 22%;
+    --sidebar-primary: 184 98% 22%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-primary-border: transparent;
+    --sidebar-accent: 48 10% 92%;
+    --sidebar-accent-foreground: 40 18% 14%;
+    --sidebar-accent-border: transparent;
+
+    --radius: 0.5625rem;
+
+    --success: 100 56% 31%;
+    --warning: 28 70% 34%;
+  }
+
+  .dark {
+    --background: 40 8% 8%;
+    --foreground: 40 6% 80%;
+
+    --card: 40 8% 10%;
+    --card-foreground: 40 6% 80%;
+    --card-border: 40 6% 22%;
+
+    --popover: 40 8% 10%;
+    --popover-foreground: 40 6% 80%;
+    --popover-border: 40 6% 22%;
+
+    --primary: 188 36% 47%;
+    --primary-foreground: 0 0% 100%;
+    --primary-border: transparent;
+
+    --secondary: 40 6% 16%;
+    --secondary-foreground: 40 6% 70%;
+    --secondary-border: transparent;
+
+    --muted: 40 6% 16%;
+    --muted-foreground: 40 4% 46%;
+    --muted-border: transparent;
+
+    --accent: 40 6% 16%;
+    --accent-foreground: 40 6% 80%;
+    --accent-border: transparent;
+
+    --destructive: 330 50% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-border: transparent;
+
+    --border: 40 6% 22%;
+    --input: 40 6% 22%;
+    --ring: 188 36% 47%;
+
+    --chart-1: 188 40% 48%;
+    --chart-2: 16 55% 48%;
+    --chart-3: 188 30% 30%;
+    --chart-4: 188 20% 50%;
+    --chart-5: 340 35% 55%;
+
+    --sidebar: 40 8% 8%;
+    --sidebar-foreground: 40 6% 80%;
+    --sidebar-border: 40 6% 22%;
+    --sidebar-ring: 188 36% 47%;
+    --sidebar-primary: 188 36% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-primary-border: transparent;
+    --sidebar-accent: 40 6% 16%;
+    --sidebar-accent-foreground: 40 6% 80%;
+    --sidebar-accent-border: transparent;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  /* Tabular nums for all data */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+}
